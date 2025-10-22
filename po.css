@@ -1,0 +1,434 @@
+       #splash {
+           position: fixed;
+           top: 0;
+           left: 0;
+           width: 100vw;
+           height: 100vh;
+           background: rgb(255, 255, 255);
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           z-index: 9999;
+           transition: opacity 0.5s ease;
+           overflow: hidden;
+       }
+
+       /* 非表示状態（フェードアウト） */
+       #splash.hidden {
+           opacity: 0;
+           pointer-events: none;
+       }
+
+       /* スプラッシュ内の動画 */
+       #splash video {
+           width: 100vw;
+           height: 100vh;
+           object-fit: cover;
+       }
+
+       /* メインコンテンツ（最初は非表示） */
+       #main {
+           display: none;
+           padding: 20px;
+           text-align: center;
+       }
+
+       .button-2 {
+           display: flex;
+           justify-content: center;
+           position: relative;
+           width: 80%;
+           /* 幅をパーセントに */
+           max-width: 200px;
+           /* 最大幅は200pxに制限 */
+           margin: 0 auto;
+           padding: 0.9em 2em;
+           border: none;
+           border-bottom: 2px solid #e6edf3;
+           background-color: transparent;
+           color: #333;
+           font-weight: 600;
+           font-size: 1em;
+           box-sizing: border-box;
+           /* パディング込みで幅計算 */
+       }
+
+       /* ホバー効果 */
+       .button-2::after {
+           position: absolute;
+           bottom: 0;
+           /* 下端にぴったり */
+           left: 0;
+           transform: scaleX(0);
+           transform-origin: center left;
+           width: 100%;
+           height: 2px;
+           background-color: #eda745;
+           content: '';
+           transition: transform 0.3s ease;
+       }
+
+       .button-2:hover::after {
+           transform: scaleX(1);
+       }
+
+       .header {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding: 15px 20px;
+           background: #ffffff;
+           position: relative;
+           z-index: 1000;
+       }
+
+
+
+       /* ハンバーガー */
+       .menu-button {
+           width: 30px;
+           height: 22px;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-between;
+           cursor: pointer;
+           z-index: 1100;
+       }
+
+       .menu-button span {
+           display: block;
+           height: 3px;
+           background: #f7a04e;
+           border-radius: 2px;
+           transition: 0.3s;
+       }
+
+       .menu-button.active span:nth-child(1) {
+           transform: rotate(45deg) translate(5px, 5px);
+       }
+
+       .menu-button.active span:nth-child(2) {
+           opacity: 0;
+       }
+
+       .menu-button.active span:nth-child(3) {
+           transform: rotate(-45deg) translate(6px, -6px);
+       }
+
+       /* スライドメニュー */
+       .nav {
+           position: fixed;
+           top: 0;
+           right: -100%;
+           width: 80%;
+           max-width: 300px;
+           height: 100%;
+           background-color: #fff;
+           box-shadow: -2px 0 5px rgba(255, 161, 53, 0.2);
+           transition: right 0.3s ease;
+           z-index: 1050;
+           padding: 60px 20px 20px;
+           box-sizing: border-box;
+       }
+
+       .nav.active {
+           right: 0;
+       }
+
+       .nav .close-button {
+           position: absolute;
+           top: 15px;
+           right: 15px;
+           font-size: 24px;
+           background: none;
+           border: none;
+           cursor: pointer;
+           color: #ffd04d;
+       }
+
+       .nav ul {
+           list-style: none;
+           padding: 0;
+           margin-top: 40px;
+           display: flex;
+           flex-direction: column;
+           gap: 20px;
+       }
+
+       .nav a {
+           text-decoration: none;
+           color: #333;
+           font-weight: bold;
+           font-size: 1.1em;
+       }
+
+
+
+       .box-010 {
+           position: relative;
+           max-width: 400px;
+           margin: 1.5em auto;
+           padding: 2.5em 1.5em 1.5em;
+           box-shadow: 0 2px 3px rgb(0 0 0 / 20%);
+           background-color: #ffcd94e3;
+           color: #333333;
+       }
+
+       .box-010 span {
+           position: absolute;
+           top: -15px;
+           transform: translateX(-.3em) rotate(-5deg);
+           padding: .5em 2em;
+           border-right: 2px dotted rgb(0 0 0 / 10%);
+           border-left: 2px dotted rgb(0 0 0 / 10%);
+           box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+           background-color: rgb(255 255 255 / 40%);
+           font-weight: 600;
+       }
+
+       .box-010 p {
+           margin: 0;
+       }
+
+       .heading-16 {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           color: #ffad50;
+       }
+
+       .heading-16::before,
+       .heading-16::after {
+           width: 3px;
+           height: 40px;
+           background-color: #ffd35c;
+           content: '';
+       }
+
+       .heading-16::before {
+           transform: rotate(-35deg);
+           margin-right: 30px;
+       }
+
+       .heading-16::after {
+           transform: rotate(35deg);
+           margin-left: 30px;
+       }
+
+       a {
+           text-decoration: none;
+
+       }
+
+       .heading-14 {
+           display: inline-block;
+           position: relative;
+           padding: .5em 1.4em .5em 1em;
+           background-color: #eac766;
+           color: #333333;
+       }
+
+       .heading-14::before {
+           position: absolute;
+           bottom: -1px;
+           right: 9px;
+           z-index: -1;
+           transform: rotate(5deg);
+           width: 70%;
+           height: 50%;
+           background-color: #d0d0d0;
+           content: "";
+           filter: blur(4px);
+       }
+
+       .heading-18 {
+
+           border: 2px solid #ff9900;
+           box-shadow: 5px 5px #ff9900;
+           color: #000000;
+       }
+
+       .heading-36 {
+           position: relative;
+           display: inline-block;
+           /* インラインブロックにして横幅を自動調整 */
+           padding: .7em 1.3em;
+           color: #333333;
+           text-align: center;
+           /* テキストの中央揃え */
+       }
+
+       .heading-36::before,
+       .heading-36::after {
+           display: inline-block;
+           position: absolute;
+           width: 1em;
+           height: 1em;
+           content: '';
+       }
+
+       .heading-36::before {
+           top: 0;
+           left: 0;
+           border-top: 3px solid #ff9900;
+           border-left: 3px solid #ff9900;
+       }
+
+       .heading-36::after {
+           bottom: 0;
+           right: 0;
+           border-bottom: 3px solid #ff9900;
+           border-right: 3px solid #ff9900;
+       }
+
+       .slideshow-container {
+           position: relative;
+           width: 100%;
+           max-width: 600px;
+           /* 最大幅を設定 */
+           margin: auto;
+           overflow: hidden;
+           /* 画像が外にはみ出ないように */
+       }
+
+       /* 各スライドのスタイル */
+       .slide {
+           display: none;
+           /* 最初は全て非表示 */
+       }
+
+       img {
+           width: 100%;
+           /* 画像の幅をコンテナに合わせる */
+           height: auto;
+       }
+
+       /* フェードイン、フェードアウト効果 */
+       .fade {
+           animation-name: fade;
+           animation-duration: 1.5s;
+           animation-timing-function: ease;
+       }
+
+       @keyframes fade {
+           0% {
+               opacity: 0;
+           }
+
+           50% {
+               opacity: 1;
+           }
+
+           100% {
+               opacity: 0;
+           }
+       }
+
+       .balloon-001 {
+           display: flex;
+           justify-content: center;
+           position: relative;
+           max-width: 300px;
+           margin-bottom: 15px;
+           padding: .8em 1.2em;
+           border-radius: 5px;
+           background-color: #ababab;
+           color: #333333;
+       }
+
+       .balloon-001::before {
+           position: absolute;
+           bottom: -15px;
+           width: 30px;
+           height: 15px;
+           background-color: #ababab;
+           clip-path: polygon(0 0, 100% 0, 50% 100%);
+           content: '';
+       }
+
+       .tab-1 {
+           display: flex;
+           flex-wrap: wrap;
+           max-width: 100%;
+       }
+
+       .tab-1>label {
+           flex: 1 1;
+           order: -1;
+           min-width: 70px;
+           padding: .7em 1em .5em;
+           border-bottom: 1px solid #f0f0f0;
+           border-radius: 0;
+           background-color: #e9f0f6;
+           color: #535353;
+           font-size: .9em;
+           text-align: center;
+           cursor: pointer;
+       }
+
+       .tab-1>label:hover {
+           opacity: .8;
+       }
+
+       .tab-1 input {
+           display: none;
+       }
+
+       .tab-1>div {
+           display: none;
+           width: 100%;
+           padding: 1.5em 1em;
+           background-color: #fff;
+       }
+
+       .tab-1 label:has(:checked) {
+           background-color: #fff;
+           border-color: #e4ca49 #f0f0f0 #fff;
+           border-style: solid;
+           border-width: 4px 1px 1px;
+           border-radius: 5px;
+           color: #333333;
+       }
+
+       .tab-1 label:has(:checked)+div {
+           display: block;
+       }
+
+       .button-1 {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           width: 250px;
+           margin: 0 auto;
+           padding: .9em 2em;
+           border: 1px solid #f7d66b;
+           border-radius: 5px;
+           background-color: #fff;
+           color: #e9cb46;
+           font-size: 1em;
+       }
+
+       .box-017 {
+           max-width: 400px;
+           margin: 0 auto;
+           padding: .5em 1.5em 1em;
+           border-top: 5px solid #f8b05d;
+           border-radius: 3px;
+           background-color: #f2f2f2;
+       }
+
+       .box-017>div {
+           margin-bottom: .5em;
+           color: #f8b05d;
+           font-weight: 600;
+           font-size: 1.05em;
+       }
+
+       .box-017>p {
+           margin: 0;
+           color: #333;
+       }
+
+       .yoko {
+           display: flex;
+       }
