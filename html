@@ -1,1 +1,192 @@
-# poto
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>po-torifuto</title>
+    <link rel="stylesheet" href="po.css">
+    <link rel="stylesheet" href="ぽ.img/">
+    <link rel="stylesheet" href="po.js">
+    <style>
+        body {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-image: url(ぽ.img/名称未設定のデザイン\ \(31\).png);
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="splash">
+        <video id="splashVideo" autoplay muted playsinline style="width: 50%; height: auto;">
+            <source src="ぽ.img/名称未設定のデザイン (3).mp4" type="video/mp4">
+
+        </video>
+    </div>
+
+    <!-- 📄 メインコンテンツ -->
+
+    <div id="main">
+        <div style="background-color: rgb(255, 255, 255);">
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <img style="width:10%;height: auto;" src="ぽ.img/Sora Cafe (1).png">
+                <a href="#トップ" class="button-2">トップ</a>
+                <a href="#メニュー" class="button-2">メニュー</a>
+                <header class="header">
+
+
+                    <!-- ハンバーガー -->
+                    <div class="menu-button" id="menuButton">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </header>
+
+                <!-- スライドメニュー -->
+                <nav class="nav" id="nav">
+                    <button class="close-button" id="closeButton">&times;</button>
+                    <ul>
+                        <li><a href="#トップ">トップ</a></li>
+                        <li><a href="#お知らせ">お知らせ</a></li>
+                        <li><a href="#メニュー">メニュー</a></li>
+                        <li><a href="">予約</a></li>
+                        <li><a href="">問い合わせ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+
+
+        <div style="background-color: rgb(255, 255, 255);">
+            <hr style="border-color: rgba(245, 245, 245, 0.39);">
+            <h2 class="heading-16">ようこそ！ 小熊カフェへ</h2>
+            <img style="width: 50%; height: auto;" src="ぽ.img/名称未設定のデザイン (31).png" alt="">
+            <br><br>
+            <h2 id="トップ" class="heading-36">トップ</h2>
+
+
+
+            <div class=" box-010 ">
+                <span>居心地の良い空間</span>
+                <p>木の温もりあふれる店内は、小熊がのんびり過ごしているような、
+                    ゆったりとした時間が流れる癒しの空間。
+
+                    壁には地元アーティストの作品が飾られ、音楽も優しく耳に届きます。</p>
+            </div>
+            <img src=" ぽ.img/名称未設定のデザイン (32).png" style="width: 50%; height: auto;">
+            <br><br>
+            <h2 class="heading-10">
+                今年オープン！！
+            </h2>
+            <div class="box-010" style="display: flex;">
+                <span>そらカフェ誕生</span>
+                <p>小さな街の片隅にある「小熊カフェ」は、
+                    自然と癒しを大切にする場所。
+                    オーナーの想いは「みんながほっと一息つける居場所をつくること」でした。
+                </p>
+            </div>
+            <div class="balloon-001">
+                <p>町のゴミ拾い、ビラ配りなども積極てきに！！</p>
+            </div>
+
+            <div style="margin: 1.5em 0 1.5em 0;  " class="box-010">
+                <span>地域のつながり</span>
+                <img src="ぽ.img/名称未設定のデザイン (37).png">
+                <p>地域の人々との交流も大切にしている小熊カフェ。
+                    ワークショップやイベントも定期開催。
+                    みんなが集う“第二のリビング”のような場所に。
+                </p>
+            </div>
+            <div class="button-1">
+                イベント情報
+            </div>
+            <div class="box-010">
+                <span id="お知らせ">お知らせ</span>
+                <p> 秋の新メニュー登場！「かぼちゃのスフレパンケーキ」販売開始しました。数量限定ですのでお早めに♪</p>
+            </div>
+            <div class="heading-16" id="メニュー">
+                <h2>季節を感じるメニュー
+                </h2>
+            </div>
+            <div class="tab-1">
+                <label>
+                    <input type="radio" name="tab-1" checked>
+                    春限定桜のスイーツ
+                </label>
+                <div>
+                    <img src="ぽ.img/名称未設定のデザイン (38).png" alt="">
+                </div>
+
+                <label>
+                    <input type="radio" name="tab-1">
+                    夏はさっぱりレモネード
+                </label>
+                <div><img src="ぽ.img/名称未設定のデザイン (39).png" alt=""></div>
+
+                <label>
+                    <input type="radio" name="tab-1">
+                    秋はほっこり栗のパフェ
+
+                </label>
+                <div><img src="ぽ.img/名称未設定のデザイン (40).png" alt=""></div>
+                <label>
+                    <input type="radio" name="tab-1">
+                    冬は温かいホットチョコレートでおもてなし
+
+                </label>
+                <div><img src="ぽ.img/名称未設定のデザイン (41).png" alt=""></div>
+            </div>
+            <a href="メニュ.html"><button class="button-1">メニュー</button></a>
+            <h1 id="住所">住所</h1>
+            <p>〒533-0013 大阪府大阪市東淀川区豊里５丁目１４</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11684.283584029312!2d135.5423003978567!3d34.73564863461093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1760193608349!5m2!1sja!2sjp"
+                width="70%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="box-017">
+                <h1 id="ei">営業時間</h1>
+                <p style="font-size: x-large;">土曜日 09:30-20:00 <br>
+                    日曜日 09:00-20:00 <br>
+                    月曜日 09:30-20:00 <br>
+                    火曜日 09:30-20:00 <br>
+                    水曜日 09:30-20:00 <br>
+                    木曜日 09:30-20:00 <br>
+                    金曜日 09:30-20:00 <br>
+
+                    ※祝日の営業時間は、9:00-20:00となります。</p>
+            </div>
+            <div style="margin-left: 30%;" class="yoko">
+                <a href="https://www.instagram.com/kawano11293?igsh=MXgzbjByY2U3Zmk5dA%3D%3D&utm_source=qr"><img
+                        src="ぽ.img/名称未設定のデザイン (25).png" alt=""></a>
+
+
+                <button style="width: 10%; height: auto; margin-left: 10%;" class="like-button" onclick="addLike()"><img
+                        src="ぽ.img/名称未設定のデザイン (27).png" alt=""> <span id="like-count">0</span></button>
+
+                <script>
+                    let likeCount = 0;
+
+                    function addLike() {
+                        likeCount++;
+                        document.getElementById('like-count').innerText = likeCount;
+                    }
+                </script>
+
+                <img style="width: 10%; height: auto; margin-left: 10%;" src="ぽ.img/名称未設定のデザイン (26).png" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="po.js"></script>
+</body>
+
+
+
+
+
+</html>
